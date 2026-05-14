@@ -66,10 +66,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);padding:18
 .cp{background:var(--pl);color:var(--pt)}.ct{background:var(--tl);color:var(--tt)}
 .ca{background:var(--al);color:var(--at)}.cc{background:var(--cl);color:var(--ct)}
 .cb{background:var(--bll);color:var(--bt)}.cg{background:var(--gl);color:var(--grt)}
-.bg{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--g);margin-top:9px}
-.bc{background:#fff;border:0.5px solid var(--paper3);border-radius:var(--r);padding:10px}
-.btt{font-size:9px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;font-family:var(--mono);color:var(--ink3);margin-bottom:5px;display:flex;align-items:center;gap:3px}
-.bc p{font-size:10.5px;color:var(--ink2);line-height:1.6}
+
 .itgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--g);margin-top:10px}
 .itcard{background:#fff;border:0.5px solid var(--paper3);border-radius:var(--r);padding:10px;border-left:3px solid var(--bl)}
 .ittt{font-size:10px;font-weight:500;font-family:var(--mono);color:var(--bt);margin-bottom:6px}
@@ -154,7 +151,7 @@ body{font-family:var(--sans);background:var(--paper);color:var(--ink);padding:18
 <div id="rows"></div>
 <div style="font-size:9px;font-weight:500;font-family:var(--mono);color:var(--ink4);text-transform:uppercase;letter-spacing:.07em;margin-top:12px;margin-bottom:5px">Impact tracking — this mode</div>
 <div class="itgrid" id="itgrid"></div>
-<div class="bg" id="bot"></div>
+
 </div>
 
 <!-- PANEL 1: BY STAKEHOLDER -->
@@ -593,11 +590,7 @@ function render(){
   });
   document.getElementById('itgrid').innerHTML=d.impact.map(it=>`<div class="itcard"><div class="ittt">${it.t}</div><div style="font-size:10.5px;color:var(--ink2);line-height:1.55">${it.c}</div></div>`).join('');
   const b=d.bot;
-  document.getElementById('bot').innerHTML=`
-  <div class="bc"><div class="btt"><span class="dot" style="background:var(--pu)"></span>Registration</div><p>${b.r}</p></div>
-  <div class="bc"><div class="btt"><span class="dot" style="background:var(--te)"></span>Nudge + delivery</div><p>${b.n}</p></div>
-  <div class="bc"><div class="btt"><span class="dot" style="background:var(--am)"></span>Reward structure</div><p>${b.rw}</p></div>
-  <div class="bc"><div class="btt"><span class="dot" style="background:var(--bl)"></span>Comparable programmes</div><p>${b.c}</p></div>`;
+
 }
 render();
 </script>
